@@ -30,8 +30,6 @@ CRITICAL ARCHITECTURAL CONSTRAINTS:
 
 import os
 import time
-import asyncio
-import concurrent.futures
 from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 from backend.config import settings
@@ -43,39 +41,20 @@ except ImportError:
     Hindsight = None
 
 
+
 class HindsightService:
     def __init__(self):
         self.api_key = settings.HINDSIGHT_API_KEY
         self.bank_id = settings.HINDSIGHT_BANK_ID
         self.base_url = settings.HINDSIGHT_BASE_URL
-        self._client: Optional[Any] = None
         self._init_error: Optional[str] = None
-
-    def _execute(self, fn, *args, **kwargs):
-        """
-        Executes a Hindsight client call in an isolated thread with its own asyncio loop.
-        Ensures full compatibility with ASGI / Uvicorn server threadpools, eliminating
-        'Timeout context manager should be used inside a task' errors.
-        """
-        def _worker():
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            try:
-                return fn(*args, **kwargs)
-            finally:
-                try:
-                    loop.run_until_complete(asyncio.sleep(0))
-                except Exception:
-                    pass
-                loop.close()
-
-        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-            return executor.submit(_worker).result()
 
     def get_client(self) -> Any:
         """
-        Lazily initializes and returns the Hindsight client.
-        Raises RuntimeError with the exact underlying message if credentials or imports fail.
+        Initializes and returns a fresh Hindsight client instance.
+        Using a per-operation client ensures that the underlying aiohttp session and
+        transport are cleanly scoped to the active execution context/thread without
+        holding references to closed event loops across consecutive requests.
         """
         if not Hindsight:
             raise RuntimeError(
@@ -89,41 +68,45 @@ class HindsightService:
                 "Obtain a key from https://ui.hindsight.vectorize.io and set it in .env."
             )
             
-        if self._client is None:
-            try:
-                self._client = Hindsight(
-                    base_url=self.base_url,
-                    api_key=self.api_key,
-                    timeout=60.0
-                )
-            except Exception as e:
-                self._init_error = str(e)
-                raise RuntimeError(f"Failed to initialize Hindsight client: {e}") from e
-                
-        return self._client
+        try:
+            return Hindsight(
+                base_url=self.base_url,
+                api_key=self.api_key,
+                timeout=60.0
+            )
+        except Exception as e:
+            self._init_error = str(e)
+            raise RuntimeError(f"Failed to initialize Hindsight client: {e}") from e
 
     def check_connection(self) -> Tuple[bool, str]:
         """
         Tests live connectivity to Hindsight Cloud.
         Returns (is_connected: bool, status_message: str).
         """
+        client = None
         try:
             client = self.get_client()
-            version = self._execute(client.get_version)
+            version = client.get_version()
             api_ver = getattr(version, "api_version", "unknown")
             return True, f"Connected to Hindsight (API version: {api_ver})"
         except Exception as e:
             return False, f"Hindsight connection error: {str(e)}"
+        finally:
+            if client:
+                try:
+                    client.close()
+                except Exception:
+                    pass
 
     def ensure_bank_exists(self) -> Tuple[bool, str]:
         """
         Ensures the organization's memory bank exists.
         Creates it if it does not already exist.
         """
+        client = None
         try:
             client = self.get_client()
-            self._execute(
-                client.create_bank,
+            client.create_bank(
                 bank_id=self.bank_id,
                 name="DealMemory Org Bank",
                 mission="Persistent organizational memory for SaaS procurement negotiations, vendor tactics, and commercial intelligence.",
@@ -139,7 +122,12 @@ class HindsightService:
             if "already exists" in err_str or "409" in err_str or "conflict" in err_str:
                 return True, f"Memory bank '{self.bank_id}' is ready."
             return False, f"Error ensuring memory bank: {str(e)}"
-
+        finally:
+            if client:
+                try:
+                    client.close()
+                except Exception:
+                    pass
 
     def retain_negotiation(
         self,
@@ -153,15 +141,13 @@ class HindsightService:
         Retains a single negotiation memory to Hindsight Cloud.
         Uses document_id for upsert idempotency: re-running retain replaces the existing document.
         """
-        client = self.get_client()
-        
-        # Ensure timestamp is ISO string if provided
+        client = None
         ts_val = timestamp or datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
         
         try:
+            client = self.get_client()
             start_time = time.time()
-            resp = self._execute(
-                client.retain,
+            resp = client.retain(
                 bank_id=self.bank_id,
                 content=content,
                 context=context,
@@ -179,6 +165,12 @@ class HindsightService:
             }
         except Exception as e:
             raise RuntimeError(f"Hindsight retain failed for document '{document_id}': {str(e)}") from e
+        finally:
+            if client:
+                try:
+                    client.close()
+                except Exception:
+                    pass
 
     def recall_memories(
         self,
@@ -200,11 +192,10 @@ class HindsightService:
         - occurred_start: Temporal start ISO string
         - metadata: Custom key-value pairs
         """
-        client = self.get_client()
-        
+        client = None
         try:
-            response = self._execute(
-                client.recall,
+            client = self.get_client()
+            response = client.recall(
                 bank_id=self.bank_id,
                 query=query,
                 budget=budget,
@@ -242,6 +233,12 @@ class HindsightService:
             return memories
         except Exception as e:
             raise RuntimeError(f"Hindsight recall failed for query '{query}': {str(e)}") from e
+        finally:
+            if client:
+                try:
+                    client.close()
+                except Exception:
+                    pass
 
     def poll_for_recallability(
         self,
@@ -278,11 +275,12 @@ class HindsightService:
         """
         Retrieves real memory bank status and metadata.
         """
+        client = None
         try:
             client = self.get_client()
-            version = self._execute(client.get_version)
+            version = client.get_version()
             # Try listing memories
-            memories = self._execute(client.list_memories, bank_id=self.bank_id, limit=100)
+            memories = client.list_memories(bank_id=self.bank_id, limit=100)
             items = getattr(memories, "items", []) or getattr(memories, "memories", []) or []
             
             return {
@@ -299,8 +297,14 @@ class HindsightService:
                 "error": str(e),
                 "status": "disconnected"
             }
-
+        finally:
+            if client:
+                try:
+                    client.close()
+                except Exception:
+                    pass
 
 
 # Singleton service instance
 hindsight_service = HindsightService()
+

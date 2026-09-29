@@ -4,9 +4,9 @@
   "evaluated_deals_count": 4,
   "overall_metrics": {
     "mean_target_price_error": {
-      "off_mode": 0.0591,
-      "on_mode": 0.0434,
-      "improvement_factor": "26.5% error reduction"
+      "off_mode": 0.0499,
+      "on_mode": 0.0499,
+      "improvement_factor": "0.0% error reduction"
     },
     "winning_tactic_top3_hit_rate": {
       "off_mode": "0.0%",
@@ -22,29 +22,29 @@
       "deal_id": "held-001",
       "experience_count": 12,
       "off_target_price_error": 0.0894,
-      "on_target_price_error": 0.0396,
-      "error_reduction_pct": 55.77
+      "on_target_price_error": 0.0894,
+      "error_reduction_pct": 0.0
     },
     {
       "deal_id": "held-002",
-      "experience_count": 13,
-      "off_target_price_error": 0.0394,
-      "on_target_price_error": 0.0237,
-      "error_reduction_pct": 39.82
+      "experience_count": 12,
+      "off_target_price_error": 0.0026,
+      "on_target_price_error": 0.0026,
+      "error_reduction_pct": 0.0
     },
     {
       "deal_id": "held-003",
-      "experience_count": 14,
+      "experience_count": 12,
       "off_target_price_error": 0.0832,
       "on_target_price_error": 0.0832,
       "error_reduction_pct": 0.0
     },
     {
       "deal_id": "held-004",
-      "experience_count": 15,
+      "experience_count": 12,
       "off_target_price_error": 0.0244,
-      "on_target_price_error": 0.0272,
-      "error_reduction_pct": -11.65
+      "on_target_price_error": 0.0244,
+      "error_reduction_pct": 0.0
     }
   ],
   "deal_evaluations": [
@@ -63,15 +63,19 @@
         "top3_tactics": [
           "Unbundle Support Fee",
           "Leverage Multi-Year Commitment",
-          "Request Line-Item Telemetry Audit"
+          "Line-Item Telemetry Audit"
         ]
       },
       "on_mode": {
-        "target_price": 2650000.0,
-        "target_price_error": 0.0396,
+        "target_price": 2512400.0,
+        "target_price_error": 0.0894,
         "winning_tactic_top3_hit": false,
         "avoided_mistake": true,
-        "top3_tactics": [],
+        "top3_tactics": [
+          "Unbundle Support Fee",
+          "Leverage Multi-Year Commitment",
+          "Line-Item Telemetry Audit"
+        ],
         "evidence_count": 1,
         "patterns_count": 0
       },
@@ -85,22 +89,26 @@
       "date": "2026-08-28",
       "actual_final_price": 1904860.0,
       "off_mode": {
-        "target_price": 1829848.0,
-        "target_price_error": 0.0394,
+        "target_price": 1900000.0,
+        "target_price_error": 0.0026,
         "winning_tactic_top3_hit": false,
         "avoided_mistake": true,
         "top3_tactics": [
-          "Leverage volume tier and competitive alternatives",
-          "Unbundle support fees and negotiate separately",
-          "Leverage renewal timing and contract duration"
+          "Leverage Volume Tier & Support Unbundling",
+          "Competitive Benchmarking & Renewal Leverage",
+          "Multi-Year Commitment Trade-off"
         ]
       },
       "on_mode": {
-        "target_price": 1950000.0,
-        "target_price_error": 0.0237,
+        "target_price": 1900000.0,
+        "target_price_error": 0.0026,
         "winning_tactic_top3_hit": false,
         "avoided_mistake": true,
-        "top3_tactics": [],
+        "top3_tactics": [
+          "Leverage 150-seat volume tier",
+          "Unbundle support fee",
+          "Leverage August month-end timing"
+        ],
         "evidence_count": 1,
         "patterns_count": 0
       },
@@ -120,8 +128,8 @@
         "avoided_mistake": true,
         "top3_tactics": [
           "Leverage Multi-Year Commitment for Discount",
-          "Bundle Support Fee into License Cost",
-          "Request Early-Renewal Discount"
+          "Bundle Support Fee Negotiation",
+          "Introduce Competitive Benchmarking"
         ]
       },
       "on_mode": {
@@ -129,8 +137,11 @@
         "target_price_error": 0.0832,
         "winning_tactic_top3_hit": false,
         "avoided_mistake": true,
-        "top3_tactics": [],
-        "evidence_count": 2,
+        "top3_tactics": [
+          "Leverage Multi-Year Commitment for Price Reduction",
+          "Bundle Support Fee Negotiation"
+        ],
+        "evidence_count": 1,
         "patterns_count": 0
       },
       "pattern_cross_checks": []
@@ -150,20 +161,23 @@
         "top3_tactics": [
           "Leverage Volume Tier Discount",
           "Unbundle Support Fee",
-          "Leverage Quarter-End Closing Pressure"
+          "Quarter-End Closing Concession"
         ]
       },
       "on_mode": {
-        "target_price": 2480000.0,
-        "target_price_error": 0.0272,
+        "target_price": 2487240.0,
+        "target_price_error": 0.0244,
         "winning_tactic_top3_hit": false,
         "avoided_mistake": true,
-        "top3_tactics": [],
-        "evidence_count": 2,
+        "top3_tactics": [
+          "Leverage 250+ seat volume tier",
+          "Unbundle and negotiate support fee"
+        ],
+        "evidence_count": 1,
         "patterns_count": 0
       },
       "pattern_cross_checks": []
     }
   ],
-  "timestamp": "2026-09-29 15:58:42"
+  "timestamp": "2026-09-29 16:45:35"
 }

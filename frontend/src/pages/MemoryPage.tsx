@@ -18,21 +18,14 @@ export const MemoryPage: React.FC = () => {
   const [recallSearched, setRecallSearched] = useState(false);
   const [recallError, setRecallError] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchMemoryStats()
-      .then((statsRes) => setStats(statsRes))
-      .catch(() => null);
-  }, []);
-
-  const handleTestRecall = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!recallQuery.trim()) return;
+  const executeRecallWithQuery = async (queryText: string, budgetLevel = budget) => {
+    if (!queryText.trim()) return;
 
     setRecallLoading(true);
     setRecallError(null);
     setRecallSearched(true);
     try {
-      const res = await testRecall(recallQuery, budget);
+      const res = await testRecall(queryText, budgetLevel);
       setRecallResults(res.memories || []);
     } catch (err: any) {
       setRecallError(err.message || 'Recall failed');
@@ -41,6 +34,21 @@ export const MemoryPage: React.FC = () => {
       setRecallLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchMemoryStats()
+      .then((statsRes) => setStats(statsRes))
+      .catch(() => null);
+
+    // Perform initial live recall on page load
+    executeRecallWithQuery(recallQuery, budget);
+  }, []);
+
+  const handleTestRecall = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await executeRecallWithQuery(recallQuery, budget);
+  };
+
 
   // Preset queries
   const presetQueries = [

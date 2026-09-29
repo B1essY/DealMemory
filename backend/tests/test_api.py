@@ -87,3 +87,22 @@ def test_demo_status_endpoint(client):
 def test_eval_results_endpoint(client):
     res = client.get("/api/eval/results")
     assert res.status_code == 200
+
+def test_consecutive_recall_endpoint(client):
+    """
+    Regression test for Step 4 & Task 1:
+    Verifies that multiple consecutive recall requests against real Hindsight
+    succeed without 'Event loop is closed' or context manager exceptions.
+    """
+    for i in range(3):
+        res = client.post("/api/memory/recall", json={
+            "query": f"NimbusCRM discount tactics check {i}",
+            "budget": "high",
+            "max_tokens": 2048
+        })
+        assert res.status_code == 200, f"Recall {i+1} failed with status {res.status_code}: {res.text}"
+        data = res.json()
+        assert "memories" in data
+        assert isinstance(data["memories"], list)
+        assert data["results_count"] >= 0
+
