@@ -1,0 +1,23 @@
+{
+  "description": "Fixed 12 seed and 4 held-out evaluation negotiation records",
+  "seed_deal_ids": [
+    "seed-001",
+    "seed-002",
+    "seed-003",
+    "seed-004",
+    "seed-005",
+    "seed-006",
+    "seed-007",
+    "seed-008",
+    "seed-009",
+    "seed-010",
+    "seed-011",
+    "seed-012"
+  ],
+  "held_out_deal_ids": [
+    "held-001",
+    "held-002",
+    "held-003",
+    "held-004"
+  ]
+}

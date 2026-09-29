@@ -1,0 +1,810 @@
+[
+  {
+    "id": "seed-001",
+    "vendor": "NimbusCRM",
+    "product": "NimbusCRM Growth",
+    "category": "CRM",
+    "date": "2024-01-24",
+    "seats": 80,
+    "initial_quote": 1187640,
+    "final_price": 1062150,
+    "contract_duration_months": 12,
+    "support_fee": 220000,
+    "renewal_type": "New",
+    "deadline": "2024-01-31",
+    "clauses_raised": [
+      "Dedicated SLA 2-hour response",
+      "Unbundled premium support charge",
+      "Annual price uplift cap"
+    ],
+    "vendor_objections": [
+      "Standard onboarding requires enterprise support tier",
+      "Multi-year commitment required for discount"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Vendor agreed to reduce support charge from INR 2,20,000 to INR 1,81,000 (17.7% cut) after we challenged scope of standard coverage",
+        "success": true
+      },
+      {
+        "tactic": "Early-renewal discount request",
+        "vendor_response": "Rejected because this was a new contract with no precedent renewal timeline",
+        "success": false
+      },
+      {
+        "tactic": "Volume discount request",
+        "vendor_response": "Refused; volume tier discount only activates above 100 seats",
+        "success": false
+      }
+    ],
+    "successful_tactics": [
+      "Support-fee unbundling challenge"
+    ],
+    "failed_tactics": [
+      "Early-renewal discount request",
+      "Volume discount request"
+    ],
+    "what_the_company_refused": "Refused vendor's proposal for 3-year lock-in without price caps.",
+    "outcome": "Final price agreed at INR 10,62,150 for 12 months with a 6% annual uplift cap.",
+    "lesson_learned": "Separate support from licence pricing when negotiating with NimbusCRM. Support fees have higher concession elasticity.",
+    "vendor_behavior": "Defensive on per-seat list prices for sub-100 seats, but flexible on unbundling support and capping future renewal escalations.",
+    "narrative": "Synthetic demo data. On 2024-01-24 NimbusCRM Growth was negotiated for 80 CRM seats. Quote was INR 11,87,640 plus INR 2,20,000 support. Challenging support reduced it 17.7% to INR 1,81,000. Early-renewal and volume requests failed. The company refused a three-year lock-in. Final price was INR 10,62,150 for 12 months with a 6% uplift cap. Lesson: separate support from licence pricing."
+  },
+  {
+    "id": "seed-002",
+    "vendor": "PeoplePulse",
+    "product": "PeoplePulse HR Core",
+    "category": "HR Software",
+    "date": "2024-03-18",
+    "seats": 140,
+    "initial_quote": 1649320,
+    "final_price": 1514870,
+    "contract_duration_months": 24,
+    "support_fee": 196000,
+    "renewal_type": "New",
+    "deadline": "2024-03-29",
+    "clauses_raised": [
+      "Implementation milestone holdback",
+      "Fixed renewal rates for year 2",
+      "Training workshop inclusion"
+    ],
+    "vendor_objections": [
+      "Base licence fees are fixed globally",
+      "Cannot discount first-year subscriptions"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Base-price discount challenge",
+        "vendor_response": "Account executive stood firm on per-seat core subscription list pricing",
+        "success": false
+      },
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "Committed to 24 months in exchange for fixed rate hold in year 2, complimentary admin training workshop, and 13.0% cut in support to INR 1,70,500",
+        "success": true
+      },
+      {
+        "tactic": "Early-renewal discount request",
+        "vendor_response": "Inapplicable for new onboarding and refused",
+        "success": false
+      }
+    ],
+    "successful_tactics": [
+      "Multi-year commitment trade"
+    ],
+    "failed_tactics": [
+      "Base-price discount challenge",
+      "Early-renewal discount request"
+    ],
+    "what_the_company_refused": "Refused paid custom payroll integration module quoted at INR 1,80,000.",
+    "outcome": "Final effective price was INR 15,14,870 with 24-month rate hold, free training workshop, and support cut 13.0%.",
+    "lesson_learned": "PeoplePulse trades term for service concessions, not base cuts.",
+    "vendor_behavior": "Strictly resists per-user base license discounts but eagerly bundles professional services, workshops, and multi-year rate holds.",
+    "narrative": "Synthetic demo data. On 2024-03-18 PeoplePulse HR Core was negotiated for 140 seats. Quote was INR 16,49,320 plus INR 1,96,000 support. A 24-month commitment secured a rate hold and workshop; support fell 13.0% to INR 1,70,500. Base-price challenge failed. Final effective price was INR 15,14,870. Lesson: PeoplePulse trades term for service concessions, not base cuts."
+  },
+  {
+    "id": "seed-003",
+    "vendor": "TracePeak",
+    "product": "TracePeak Observe",
+    "category": "Cloud Monitoring",
+    "date": "2024-06-11",
+    "seats": 60,
+    "initial_quote": 943780,
+    "final_price": 851430,
+    "contract_duration_months": 12,
+    "support_fee": 178500,
+    "renewal_type": "Renewal",
+    "deadline": "2024-06-20",
+    "clauses_raised": [
+      "Log retention overage ceiling",
+      "Telemetry data transfer credit",
+      "Audit line-item review"
+    ],
+    "vendor_objections": [
+      "Usage metrics are calculated automatically",
+      "Support fees cover 24x7 telemetry ingestion"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Audited line-item telemetry support scope and removed unused 24/7 pager duty tier, cutting support 18.3% to INR 1,45,900",
+        "success": true
+      },
+      {
+        "tactic": "Early-renewal discount request",
+        "vendor_response": "Refused; TracePeak states renewals follow automated indexation",
+        "success": false
+      },
+      {
+        "tactic": "Log overage cap negotiation",
+        "vendor_response": "Agreed to 12% overage cap for spike months",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Support-fee unbundling challenge",
+      "Log overage cap negotiation"
+    ],
+    "failed_tactics": [
+      "Early-renewal discount request"
+    ],
+    "what_the_company_refused": "Refused premium real-time synthetic test pack at INR 95,000.",
+    "outcome": "Final price was INR 8,51,430 after line-item support reduction and 12% overage ceiling.",
+    "lesson_learned": "Challenge TracePeak support scope line by line. Removing unused standby tiers yields 18%+ reductions.",
+    "vendor_behavior": "Pushes complex telemetry ingestion metrics; highly vulnerable to detailed line-by-line consumption audits.",
+    "narrative": "Synthetic demo data. On 2024-06-11 TracePeak Observe was renewed for 60 seats. Quote was INR 9,43,780 plus INR 1,78,500 support. Line-item challenge cut support 18.3% to INR 1,45,900. Early-renewal discount failed; a 12% overage cap worked. Final price was INR 8,51,430. Lesson: challenge TracePeak support scope line by line."
+  },
+  {
+    "id": "seed-004",
+    "vendor": "ShieldArc",
+    "product": "ShieldArc Endpoint",
+    "category": "Cybersecurity",
+    "date": "2024-09-26",
+    "seats": 200,
+    "initial_quote": 2374860,
+    "final_price": 2049730,
+    "contract_duration_months": 12,
+    "support_fee": 286000,
+    "renewal_type": "New",
+    "deadline": "2024-09-30",
+    "clauses_raised": [
+      "Incident forensics turnaround SLA",
+      "Quarter-end closing concession",
+      "Consolidated 200-seat tier"
+    ],
+    "vendor_objections": [
+      "Competitor quotes from regional vendors do not include zero-day heuristic protection"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Volume tier threshold challenge",
+        "vendor_response": "Consolidated enterprise fleet demand reached 200 seats, triggering tier 2 discount",
+        "success": true
+      },
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Support reduced 15.5% to INR 2,41,700 while retaining 1-hour critical incident coverage",
+        "success": true
+      },
+      {
+        "tactic": "Competitor alternative leverage",
+        "vendor_response": "Vendor dismissed competitor quote as technically non-equivalent and refused further concession",
+        "success": false
+      }
+    ],
+    "successful_tactics": [
+      "Volume tier threshold challenge",
+      "Support-fee unbundling challenge"
+    ],
+    "failed_tactics": [
+      "Competitor alternative leverage"
+    ],
+    "what_the_company_refused": "Refused multi-year lock-in without downgrade provisions.",
+    "outcome": "Final price was INR 20,49,730 with 200-seat volume pricing and support reduced to INR 2,41,700.",
+    "lesson_learned": "Consolidated seat volume crossing 200 units activates strong tier discounting with ShieldArc.",
+    "vendor_behavior": "Disregards regional competitor comparisons but responds strongly to consolidated seat commitments.",
+    "narrative": "Synthetic demo data. On 2024-09-26 ShieldArc Endpoint was negotiated for 200 seats. Quote was INR 23,74,860 plus INR 2,86,000 support. Consolidated demand won the 200-seat tier; support fell 15.5% to INR 2,41,700 while incident coverage stayed. An unmatched competitor benchmark failed. Final price was INR 20,49,730."
+  },
+  {
+    "id": "seed-005",
+    "vendor": "TeamNest",
+    "product": "TeamNest Business",
+    "category": "Collaboration Suite",
+    "date": "2024-12-09",
+    "seats": 45,
+    "initial_quote": 684930,
+    "final_price": 656420,
+    "contract_duration_months": 12,
+    "support_fee": 72000,
+    "renewal_type": "New",
+    "deadline": "2024-12-18",
+    "clauses_raised": [
+      "True-down license clause",
+      "Workspace migration support",
+      "Quarterly license true-up"
+    ],
+    "vendor_objections": [
+      "Under 50 seats does not qualify for discounting",
+      "Support is bundled as a fixed flat fee"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "TeamNest refused to discount fixed support fee on sub-50 seat accounts",
+        "success": false
+      },
+      {
+        "tactic": "Early-renewal discount request",
+        "vendor_response": "Categorically rejected by automated pricing desk",
+        "success": false
+      },
+      {
+        "tactic": "Contractual flexibility & true-down negotiation",
+        "vendor_response": "Granted 10% true-down quarterly adjustment right and minor administrative adjustment",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Contractual flexibility & true-down negotiation"
+    ],
+    "failed_tactics": [
+      "Support-fee unbundling challenge",
+      "Early-renewal discount request"
+    ],
+    "what_the_company_refused": "Refused upfront 3-year commitment for marginal 3% rebate.",
+    "outcome": "Final price was INR 6,56,420 with 10% true-down protection. Support fee remained fixed.",
+    "lesson_learned": "At low seat counts (<50) TeamNest trades flexibility (true-downs, seat swaps), not price.",
+    "vendor_behavior": "Rigid on base seat rates for small teams; willing to grant operational flexibility clauses.",
+    "narrative": "Synthetic demo data. On 2024-12-09 TeamNest Business was negotiated for 45 seats. Quote was INR 6,84,930 plus fixed support of INR 72,000. Support and early-renewal requests failed. A 10% true-down right worked. Final price was INR 6,56,420. Lesson: at low seat counts TeamNest trades flexibility, not price."
+  },
+  {
+    "id": "seed-006",
+    "vendor": "NimbusCRM",
+    "product": "NimbusCRM Growth",
+    "category": "CRM",
+    "date": "2025-03-27",
+    "seats": 120,
+    "initial_quote": 1768450,
+    "final_price": 1456920,
+    "contract_duration_months": 12,
+    "support_fee": 248000,
+    "renewal_type": "Renewal",
+    "deadline": "2025-03-31",
+    "clauses_raised": [
+      "Fiscal year-end closing discount",
+      "Unbundled premium sandbox",
+      "Support fee haircut"
+    ],
+    "vendor_objections": [
+      "Quarter-end discounts require immediate PO submission before March 31 close"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Quarter-end deadline timing crunch",
+        "vendor_response": "Sales VP approved exceptional 15% license reduction to close transaction before March 31",
+        "success": true
+      },
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Support reduced 19.1% from INR 2,48,000 to INR 2,00,600",
+        "success": true
+      },
+      {
+        "tactic": "Volume tier threshold challenge",
+        "vendor_response": "Crossed 100-seat boundary from 80 to 120 seats, unlocking tier 2 pricing",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Quarter-end deadline timing crunch",
+      "Support-fee unbundling challenge",
+      "Volume tier threshold challenge"
+    ],
+    "failed_tactics": [],
+    "what_the_company_refused": "Refused multi-year lock-in without price protection.",
+    "outcome": "Final price was INR 14,56,920 with support reduced by 19.1% and substantial quarter-end discount.",
+    "lesson_learned": "NimbusCRM showed massive latitude close to quarter-end (March 31) when combined with volume expansion above 100 seats.",
+    "vendor_behavior": "Eager to make deep concessions within 96 hours of fiscal quarter close to satisfy corporate sales quota.",
+    "narrative": "Synthetic demo data. On 2025-03-27 NimbusCRM Growth was negotiated for 120 seats. Quote was INR 17,68,450 plus INR 2,48,000 support. Volume, support challenge, and a 31 March deadline worked; support fell 19.1% to INR 2,00,600. Final price was INR 14,56,920. Lesson: NimbusCRM showed latitude close to quarter-end with credible growth."
+  },
+  {
+    "id": "seed-007",
+    "vendor": "PeoplePulse",
+    "product": "PeoplePulse Talent",
+    "category": "HR Software",
+    "date": "2025-06-16",
+    "seats": 75,
+    "initial_quote": 1129780,
+    "final_price": 1086420,
+    "contract_duration_months": 12,
+    "support_fee": 154000,
+    "renewal_type": "New",
+    "deadline": "2025-06-25",
+    "clauses_raised": [
+      "Implementation milestone acceptance gate",
+      "Service credits for delay",
+      "Support fee waiver"
+    ],
+    "vendor_objections": [
+      "Accounts under 100 seats do not qualify for custom service credits or multi-year terms"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Refused; vendor stated standard onboarding support cannot be altered below 100 seats",
+        "success": false
+      },
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "Vendor refused multi-year discount incentives on small seat counts",
+        "success": false
+      },
+      {
+        "tactic": "Implementation milestone acceptance gate",
+        "vendor_response": "Agreed to tie 20% payment to formal acceptance sign-off, protecting rollout timeline",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Implementation milestone acceptance gate"
+    ],
+    "failed_tactics": [
+      "Support-fee unbundling challenge",
+      "Multi-year commitment trade"
+    ],
+    "what_the_company_refused": "Refused paid talent analytics add-on at INR 1,20,000.",
+    "outcome": "Final price was INR 10,86,420 with milestone acceptance protection. Support and multi-year requests failed.",
+    "lesson_learned": "PeoplePulse term leverage weakened below 100 seats. Support concessions require 100+ seats.",
+    "vendor_behavior": "Inflexible on pricing concessions when dealing with small departmental rollouts under 100 seats.",
+    "narrative": "Synthetic demo data. On 2025-06-16 PeoplePulse Talent was negotiated for 75 seats. Quote was INR 11,29,780 plus INR 1,54,000 support. Support and multi-year requests failed below 100 seats. An implementation acceptance gate worked. Final price was INR 10,86,420. Lesson: PeoplePulse term leverage weakened below 100 seats."
+  },
+  {
+    "id": "seed-008",
+    "vendor": "TracePeak",
+    "product": "TracePeak Observe Enterprise",
+    "category": "Cloud Monitoring",
+    "date": "2025-08-21",
+    "seats": 250,
+    "initial_quote": 2847630,
+    "final_price": 2529180,
+    "contract_duration_months": 12,
+    "support_fee": 392000,
+    "renewal_type": "New",
+    "deadline": "2025-08-30",
+    "clauses_raised": [
+      "Ingestion tier commitment band",
+      "Quarterly ramp-up schedule",
+      "Multi-year price lock"
+    ],
+    "vendor_objections": [
+      "Multi-year term discount requires upfront multi-year cash payment"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "Vendor demanded full multi-year prepayment upfront; negotiation stalled and failed",
+        "success": false
+      },
+      {
+        "tactic": "Quantified workload ingestion band leverage",
+        "vendor_response": "Provided historical cloud telemetry logs to prove predictable usage; vendor granted customized ingestion band and quarterly ramp",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Quantified workload ingestion band leverage"
+    ],
+    "failed_tactics": [
+      "Multi-year commitment trade"
+    ],
+    "what_the_company_refused": "Refused multi-year contract requiring 100% upfront capital disbursement.",
+    "outcome": "Final price was INR 25,29,180 with customized ingestion band and quarterly ramp.",
+    "lesson_learned": "Quantified workload volume was stronger than term length with TracePeak. Back telemetry with hard numbers.",
+    "vendor_behavior": "Demands burdensome upfront cash terms for multi-year discounts, but easily yields to technical workload data.",
+    "narrative": "Synthetic demo data. On 2025-08-21 TracePeak Observe Enterprise was negotiated for 250 seats. Quote was INR 28,47,630 plus INR 3,92,000 support. Multi-year failed; workload forecasts won an ingestion band and quarterly ramp. Final price was INR 25,29,180. Lesson: quantified workload volume was stronger than term length."
+  },
+  {
+    "id": "seed-009",
+    "vendor": "ShieldArc",
+    "product": "ShieldArc Cloud Guard",
+    "category": "Cybersecurity",
+    "date": "2025-12-12",
+    "seats": 90,
+    "initial_quote": 1586740,
+    "final_price": 1438290,
+    "contract_duration_months": 24,
+    "support_fee": 214000,
+    "renewal_type": "New",
+    "deadline": "2025-12-22",
+    "clauses_raised": [
+      "Two-year fixed price guarantee",
+      "Volume concession",
+      "Quarterly compliance review"
+    ],
+    "vendor_objections": [
+      "Volume pricing requires at least 150 endpoint seats"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Volume discount request",
+        "vendor_response": "Refused because 90 seats fell well short of the mandatory 150-seat volume tier threshold",
+        "success": false
+      },
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "Accepted 24-month commitment in exchange for a price freeze and 7% license concession",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Multi-year commitment trade"
+    ],
+    "failed_tactics": [
+      "Volume discount request"
+    ],
+    "what_the_company_refused": "Refused paid SOC onboarding package at INR 1,60,000.",
+    "outcome": "Final effective price was INR 14,38,290 over 24 months with 7% license concession and price lock.",
+    "lesson_learned": "ShieldArc strictly enforces the 150-seat threshold for volume discounts, but will grant concessions for 24-month commitments.",
+    "vendor_behavior": "Strictly gatekeeps volume discount brackets, but readily trades discounts for multi-year contract duration.",
+    "narrative": "Synthetic demo data. On 2025-12-12 ShieldArc Cloud Guard was negotiated for 90 seats. Quote was INR 15,86,740 plus INR 2,14,000 support. Volume failed below 150 seats; 24 months won a price hold and 7% licence concession. Final effective price was INR 14,38,290."
+  },
+  {
+    "id": "seed-010",
+    "vendor": "TeamNest",
+    "product": "TeamNest Enterprise",
+    "category": "Collaboration Suite",
+    "date": "2026-03-05",
+    "seats": 180,
+    "initial_quote": 1924380,
+    "final_price": 1647750,
+    "contract_duration_months": 12,
+    "support_fee": 168000,
+    "renewal_type": "Renewal",
+    "deadline": "2026-03-15",
+    "clauses_raised": [
+      "175-seat tier qualification",
+      "Seat reassignment flexibility",
+      "Multi-year rate hold"
+    ],
+    "vendor_objections": [
+      "Multi-year discount requires forfeiting quarterly true-down rights"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Volume tier threshold challenge",
+        "vendor_response": "Recognized 180 seats exceeded the 175-seat tier threshold, granting 12% per-seat price reduction",
+        "success": true
+      },
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "Vendor offered 3% additional discount only if company surrendered true-down flexibility; refused by us",
+        "success": false
+      },
+      {
+        "tactic": "Seat reassignment flexibility clause",
+        "vendor_response": "Granted unlimited contractor seat reassignments without surcharge",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Volume tier threshold challenge",
+      "Seat reassignment flexibility clause"
+    ],
+    "failed_tactics": [
+      "Multi-year commitment trade"
+    ],
+    "what_the_company_refused": "Refused multi-year lock-in as it eliminated the crucial true-down flexibility.",
+    "outcome": "Final price was INR 16,47,750 with 175-seat tier pricing and seat reassignment rights.",
+    "lesson_learned": "The 175-seat tier and reassignment flexibility worked well with TeamNest; multi-year terms did not justify lost true-down.",
+    "vendor_behavior": "Tries to claw back flexibility rights when customers ask for multi-year discounts.",
+    "narrative": "Synthetic demo data. On 2026-03-05 TeamNest Enterprise was negotiated for 180 seats. Quote was INR 19,24,380 plus INR 1,68,000 support. The 175-seat tier and reassignment flexibility worked; multi-year terms did not justify lost true-down. Final price was INR 16,47,750."
+  },
+  {
+    "id": "seed-011",
+    "vendor": "NimbusCRM",
+    "product": "NimbusCRM Sales",
+    "category": "CRM",
+    "date": "2026-06-17",
+    "seats": 55,
+    "initial_quote": 918670,
+    "final_price": 873240,
+    "contract_duration_months": 12,
+    "support_fee": 132000,
+    "renewal_type": "New",
+    "deadline": "2026-06-25",
+    "clauses_raised": [
+      "API limit expansion",
+      "Mid-year discount escalation",
+      "Volume discount"
+    ],
+    "vendor_objections": [
+      "55 seats is too small for volume or quarter-end enterprise exception pricing"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Volume discount request",
+        "vendor_response": "Refused; account executive confirmed volume tier begins strictly at 100 seats",
+        "success": false
+      },
+      {
+        "tactic": "Early quarter-end escalation",
+        "vendor_response": "Attempted 14 days before quarter-end on small 55-seat deal; sales VP refused exception",
+        "success": false
+      },
+      {
+        "tactic": "API rate capacity barter",
+        "vendor_response": "Successfully traded full license price for doubled API throughput and INR 45,430 nominal credit",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "API rate capacity barter"
+    ],
+    "failed_tactics": [
+      "Volume discount request",
+      "Early quarter-end escalation"
+    ],
+    "what_the_company_refused": "Refused premium AI lead scoring plugin at INR 85,000.",
+    "outcome": "Final price was INR 8,73,240 with doubled API capacity.",
+    "lesson_learned": "Quarter-end leverage with NimbusCRM requires deal size and tight timing (<72h before close). Below 80 seats, trade technical capacity instead.",
+    "vendor_behavior": "Will not escalate discount requests to executive management for low-value deals unless close to quarter-end deadline.",
+    "narrative": "Synthetic demo data. On 2026-06-17 NimbusCRM Sales was negotiated for 55 seats. Quote was INR 9,18,670 plus INR 1,32,000 support. Volume and early quarter-end escalation failed. Doubled API capacity worked. Final price was INR 8,73,240. Lesson: quarter-end leverage depends on timing and size."
+  },
+  {
+    "id": "seed-012",
+    "vendor": "PeoplePulse",
+    "product": "PeoplePulse HR Suite",
+    "category": "HR Software",
+    "date": "2026-07-29",
+    "seats": 320,
+    "initial_quote": 3489760,
+    "final_price": 2893650,
+    "contract_duration_months": 24,
+    "support_fee": 334000,
+    "renewal_type": "Renewal",
+    "deadline": "2026-08-05",
+    "clauses_raised": [
+      "300-seat enterprise tier",
+      "Two-year rate freeze",
+      "Dedicated customer success manager"
+    ],
+    "vendor_objections": [
+      "Base price cuts on standard suite require formal multi-year executive sign-off"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Base-price discount challenge",
+        "vendor_response": "Direct challenge to per-seat list rate rejected as non-compliant with standard price books",
+        "success": false
+      },
+      {
+        "tactic": "Volume tier threshold challenge",
+        "vendor_response": "320 seats unlocked the 300+ seat enterprise bracket, reducing per-seat base by 11.5%",
+        "success": true
+      },
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "24-month term secured 2-year rate hold, dedicated CSM staff, and waived premium support tier",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Volume tier threshold challenge",
+      "Multi-year commitment trade"
+    ],
+    "failed_tactics": [
+      "Base-price discount challenge"
+    ],
+    "what_the_company_refused": "Refused 3-year term with automatic indexation.",
+    "outcome": "Final effective price was INR 28,93,650 over 24 months with 300-seat volume band, dedicated CSM, and rate hold.",
+    "lesson_learned": "Direct base price challenges fail with PeoplePulse. Combining 300+ seat volume tiers with 24-month commitments unlocks peak concessions.",
+    "vendor_behavior": "Strictly resists ungrounded base discounts, but responds generously when volume thresholds and multi-year stability are bundled.",
+    "narrative": "Synthetic demo data. On 2026-07-29 PeoplePulse HR Suite was negotiated for 320 seats. Quote was INR 34,89,760 plus INR 3,34,000 support. Standalone base challenge failed; the 300-seat band plus 24 months won a rate hold and staff. Final effective price was INR 28,93,650."
+  },
+  {
+    "id": "held-001",
+    "vendor": "TracePeak",
+    "product": "TracePeak Observe Plus",
+    "category": "Cloud Monitoring",
+    "date": "2026-08-07",
+    "seats": 280,
+    "initial_quote": 3140500,
+    "final_price": 2759140,
+    "contract_duration_months": 12,
+    "support_fee": 420000,
+    "renewal_type": "Renewal",
+    "deadline": "2026-08-15",
+    "clauses_raised": [
+      "Line-item telemetry audit",
+      "Support fee unbundling",
+      "Multi-year commitment"
+    ],
+    "vendor_objections": [
+      "Multi-year discount requires full upfront payment",
+      "Support fees are bundled with automated alerts"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Conducted line-by-line audit of telemetry support, removing redundant premium monitoring hours, cutting support by 18.2%",
+        "success": true
+      },
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "Refused because vendor required 100% upfront multi-year cash disbursement",
+        "success": false
+      },
+      {
+        "tactic": "Quantified workload ingestion band leverage",
+        "vendor_response": "Presented 6 months of historical log volume, obtaining custom data ingestion tier",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Support-fee unbundling challenge",
+      "Quantified workload ingestion band leverage"
+    ],
+    "failed_tactics": [
+      "Multi-year commitment trade"
+    ],
+    "what_the_company_refused": "Refused multi-year lock-in due to upfront cash payment requirement.",
+    "outcome": "Final price was INR 27,59,140. Support fee cut by 18.2% and workload ingestion band secured.",
+    "lesson_learned": "Multi-year commitments continue to fail with TracePeak due to cash requirements. Line-item support unbundling and technical workload data succeed.",
+    "vendor_behavior": "Demands upfront multi-year payments, but yields readily to line-item support challenges and log volume data.",
+    "narrative": "Synthetic demo data. On 2026-08-07 TracePeak Observe Plus was negotiated for 280 seats. Quote was INR 31,40,500 plus INR 4,20,000 support. Line-item support audit succeeded in cutting support 18.2%. Multi-year negotiation failed due to upfront cash requirement. Workload forecasting won ingestion concessions. Final price was INR 27,59,140."
+  },
+  {
+    "id": "held-002",
+    "vendor": "NimbusCRM",
+    "product": "NimbusCRM Growth",
+    "category": "CRM",
+    "date": "2026-08-28",
+    "seats": 160,
+    "initial_quote": 2287310,
+    "final_price": 1904860,
+    "contract_duration_months": 12,
+    "support_fee": 262000,
+    "renewal_type": "Renewal",
+    "deadline": "2026-08-31",
+    "clauses_raised": [
+      "Support unbundling",
+      "150-seat volume tier",
+      "August month-end timing"
+    ],
+    "vendor_objections": [
+      "August is not a fiscal quarter-end close (Q3 closes in late September)"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Volume tier threshold challenge",
+        "vendor_response": "160 seats exceeded the 150-seat tier, unlocking lower per-seat base price",
+        "success": true
+      },
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Reduced support charge by 16.8% after unbundling non-critical SLA tickets",
+        "success": true
+      },
+      {
+        "tactic": "Quarter-end deadline timing crunch",
+        "vendor_response": "Attempted quarter-end push in late August, but sales VP declined because fiscal quarter ends on September 30",
+        "success": false
+      }
+    ],
+    "successful_tactics": [
+      "Volume tier threshold challenge",
+      "Support-fee unbundling challenge"
+    ],
+    "failed_tactics": [
+      "Quarter-end deadline timing crunch"
+    ],
+    "what_the_company_refused": "Refused multi-year lock-in without fixed renewal rate caps.",
+    "outcome": "Final price was INR 19,04,860. The 150-seat tier and support unbundling succeeded; August timing push failed.",
+    "lesson_learned": "Quarter-end concessions with NimbusCRM strictly occur in late March and late September (fiscal quarter ends), not arbitrary month-ends.",
+    "vendor_behavior": "Strictly adheres to calendar quarter close for quota-driven concessions; reliably honors volume tier brackets.",
+    "narrative": "Synthetic demo data. On 2026-08-28 NimbusCRM Growth was negotiated for 160 seats. Quote was INR 22,87,310 plus INR 2,62,000 support. The 150-seat tier and support unbundling succeeded, cutting support 16.8%. However, an escalation at the end of August failed as fiscal quarter close is September 30. Final price was INR 19,04,860."
+  },
+  {
+    "id": "held-003",
+    "vendor": "TeamNest",
+    "product": "TeamNest Enterprise",
+    "category": "Collaboration Suite",
+    "date": "2026-09-10",
+    "seats": 110,
+    "initial_quote": 1379640,
+    "final_price": 1287150,
+    "contract_duration_months": 12,
+    "support_fee": 126000,
+    "renewal_type": "Renewal",
+    "deadline": "2026-09-20",
+    "clauses_raised": [
+      "Renewal rate cap",
+      "True-down retention",
+      "Early-renewal discount",
+      "Multi-year commitment"
+    ],
+    "vendor_objections": [
+      "Multi-year discount requires waiving quarterly true-down rights"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Early-renewal discount request",
+        "vendor_response": "Categorically rejected by automated licensing engine",
+        "success": false
+      },
+      {
+        "tactic": "Multi-year commitment trade",
+        "vendor_response": "Offered discount only if company surrendered true-down flexibility; company rejected trade-off",
+        "success": false
+      },
+      {
+        "tactic": "Renewal price uplift cap negotiation",
+        "vendor_response": "Agreed to 5% annual renewal cap while retaining true-down flexibility",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Renewal price uplift cap negotiation"
+    ],
+    "failed_tactics": [
+      "Early-renewal discount request",
+      "Multi-year commitment trade"
+    ],
+    "what_the_company_refused": "Refused multi-year contract because it required relinquishing true-down flexibility.",
+    "outcome": "Final price was INR 12,87,150. Secured 5% renewal cap; multi-year and early-renewal failed.",
+    "lesson_learned": "Early-renewal requests continuously fail with TeamNest. Preserve true-down rights rather than trading them for minor multi-year discounts.",
+    "vendor_behavior": "Continuously attempts to remove true-down clauses during renewal discussions.",
+    "narrative": "Synthetic demo data. On 2026-09-10 TeamNest Enterprise was negotiated for 110 seats. Quote was INR 13,79,640 plus INR 1,26,000 support. Early renewal discount failed. Multi-year negotiation failed due to requested loss of true-down. A 5% renewal cap was successfully secured. Final price was INR 12,87,150."
+  },
+  {
+    "id": "held-004",
+    "vendor": "ShieldArc",
+    "product": "ShieldArc Endpoint Plus",
+    "category": "Cybersecurity",
+    "date": "2026-09-25",
+    "seats": 260,
+    "initial_quote": 2984500,
+    "final_price": 2549380,
+    "contract_duration_months": 12,
+    "support_fee": 345000,
+    "renewal_type": "New",
+    "deadline": "2026-09-30",
+    "clauses_raised": [
+      "Support fee unbundling",
+      "250+ seat volume tier",
+      "Quarter-end closing concession"
+    ],
+    "vendor_objections": [
+      "Standard support tier is necessary for endpoint deployment"
+    ],
+    "tactics_attempted": [
+      {
+        "tactic": "Volume tier threshold challenge",
+        "vendor_response": "260 seats comfortably crossed the 250-seat volume tier, activating 12% baseline discount",
+        "success": true
+      },
+      {
+        "tactic": "Support-fee unbundling challenge",
+        "vendor_response": "Challenged unbundled support fee, securing 15.2% reduction to INR 2,92,500",
+        "success": true
+      },
+      {
+        "tactic": "Quarter-end deadline timing crunch",
+        "vendor_response": "Executing PO before September 30 fiscal close secured additional executive concession",
+        "success": true
+      }
+    ],
+    "successful_tactics": [
+      "Volume tier threshold challenge",
+      "Support-fee unbundling challenge",
+      "Quarter-end deadline timing crunch"
+    ],
+    "failed_tactics": [],
+    "what_the_company_refused": "Refused vendor attempt to bundle auxiliary mobile threat defense modules.",
+    "outcome": "Final effective price was INR 25,49,380 for 260 seats with volume tier, support reduction, and quarter-end close.",
+    "lesson_learned": "Cross-vendor pattern confirmed: challenging support fees and volume tier consolidation yields substantial savings; quarter-end timing provides closing leverage.",
+    "vendor_behavior": "Highly responsive to volume threshold crossing and quarter-end closing deadlines.",
+    "narrative": "Synthetic demo data. On 2026-09-25 ShieldArc Endpoint Plus was negotiated for 260 seats. Quote was INR 29,84,500 plus INR 3,45,000 support. Volume tier crossing (250+ seats), support unbundling (15.2% cut), and quarter-end timing crunch succeeded. Final price was INR 25,49,380."
+  }
+]

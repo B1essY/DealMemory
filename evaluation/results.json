@@ -1,0 +1,169 @@
+{
+  "evaluation_label": "Results from a small synthetic test set.",
+  "disclaimer": "All numbers reflect measured performance on a synthetic test set of 4 held-out SaaS deals. No statistical significance or real-world claims are made.",
+  "evaluated_deals_count": 4,
+  "overall_metrics": {
+    "mean_target_price_error": {
+      "off_mode": 0.0591,
+      "on_mode": 0.0434,
+      "improvement_factor": "26.5% error reduction"
+    },
+    "winning_tactic_top3_hit_rate": {
+      "off_mode": "0.0%",
+      "on_mode": "0.0%"
+    },
+    "avoided_mistake_rate": {
+      "off_mode": "100.0%",
+      "on_mode": "100.0%"
+    }
+  },
+  "learning_curve": [
+    {
+      "deal_id": "held-001",
+      "experience_count": 12,
+      "off_target_price_error": 0.0894,
+      "on_target_price_error": 0.0396,
+      "error_reduction_pct": 55.77
+    },
+    {
+      "deal_id": "held-002",
+      "experience_count": 13,
+      "off_target_price_error": 0.0394,
+      "on_target_price_error": 0.0237,
+      "error_reduction_pct": 39.82
+    },
+    {
+      "deal_id": "held-003",
+      "experience_count": 14,
+      "off_target_price_error": 0.0832,
+      "on_target_price_error": 0.0832,
+      "error_reduction_pct": 0.0
+    },
+    {
+      "deal_id": "held-004",
+      "experience_count": 15,
+      "off_target_price_error": 0.0244,
+      "on_target_price_error": 0.0272,
+      "error_reduction_pct": -11.65
+    }
+  ],
+  "deal_evaluations": [
+    {
+      "deal_id": "held-001",
+      "vendor": "TracePeak",
+      "product": "TracePeak Observe Plus",
+      "category": "Cloud Monitoring",
+      "date": "2026-08-07",
+      "actual_final_price": 2759140.0,
+      "off_mode": {
+        "target_price": 2512400.0,
+        "target_price_error": 0.0894,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [
+          "Unbundle Support Fee",
+          "Leverage Multi-Year Commitment",
+          "Request Line-Item Telemetry Audit"
+        ]
+      },
+      "on_mode": {
+        "target_price": 2650000.0,
+        "target_price_error": 0.0396,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [],
+        "evidence_count": 1,
+        "patterns_count": 0
+      },
+      "pattern_cross_checks": []
+    },
+    {
+      "deal_id": "held-002",
+      "vendor": "NimbusCRM",
+      "product": "NimbusCRM Growth",
+      "category": "CRM",
+      "date": "2026-08-28",
+      "actual_final_price": 1904860.0,
+      "off_mode": {
+        "target_price": 1829848.0,
+        "target_price_error": 0.0394,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [
+          "Leverage volume tier and competitive alternatives",
+          "Unbundle support fees and negotiate separately",
+          "Leverage renewal timing and contract duration"
+        ]
+      },
+      "on_mode": {
+        "target_price": 1950000.0,
+        "target_price_error": 0.0237,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [],
+        "evidence_count": 1,
+        "patterns_count": 0
+      },
+      "pattern_cross_checks": []
+    },
+    {
+      "deal_id": "held-003",
+      "vendor": "TeamNest",
+      "product": "TeamNest Enterprise",
+      "category": "Collaboration Suite",
+      "date": "2026-09-10",
+      "actual_final_price": 1287150.0,
+      "off_mode": {
+        "target_price": 1180000.0,
+        "target_price_error": 0.0832,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [
+          "Leverage Multi-Year Commitment for Discount",
+          "Bundle Support Fee into License Cost",
+          "Request Early-Renewal Discount"
+        ]
+      },
+      "on_mode": {
+        "target_price": 1180000.0,
+        "target_price_error": 0.0832,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [],
+        "evidence_count": 2,
+        "patterns_count": 0
+      },
+      "pattern_cross_checks": []
+    },
+    {
+      "deal_id": "held-004",
+      "vendor": "ShieldArc",
+      "product": "ShieldArc Endpoint Plus",
+      "category": "Cybersecurity",
+      "date": "2026-09-25",
+      "actual_final_price": 2549380.0,
+      "off_mode": {
+        "target_price": 2487240.0,
+        "target_price_error": 0.0244,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [
+          "Leverage Volume Tier Discount",
+          "Unbundle Support Fee",
+          "Leverage Quarter-End Closing Pressure"
+        ]
+      },
+      "on_mode": {
+        "target_price": 2480000.0,
+        "target_price_error": 0.0272,
+        "winning_tactic_top3_hit": false,
+        "avoided_mistake": true,
+        "top3_tactics": [],
+        "evidence_count": 2,
+        "patterns_count": 0
+      },
+      "pattern_cross_checks": []
+    }
+  ],
+  "timestamp": "2026-09-29 15:58:42"
+}
