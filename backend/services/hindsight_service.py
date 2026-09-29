@@ -30,6 +30,8 @@ CRITICAL ARCHITECTURAL CONSTRAINTS:
 
 import os
 import time
+import asyncio
+import concurrent.futures
 from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 from backend.config import settings
@@ -48,6 +50,27 @@ class HindsightService:
         self.base_url = settings.HINDSIGHT_BASE_URL
         self._client: Optional[Any] = None
         self._init_error: Optional[str] = None
+
+    def _execute(self, fn, *args, **kwargs):
+        """
+        Executes a Hindsight client call in an isolated thread with its own asyncio loop.
+        Ensures full compatibility with ASGI / Uvicorn server threadpools, eliminating
+        'Timeout context manager should be used inside a task' errors.
+        """
+        def _worker():
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            try:
+                return fn(*args, **kwargs)
+            finally:
+                try:
+                    loop.run_until_complete(asyncio.sleep(0))
+                except Exception:
+                    pass
+                loop.close()
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+            return executor.submit(_worker).result()
 
     def get_client(self) -> Any:
         """
@@ -86,7 +109,7 @@ class HindsightService:
         """
         try:
             client = self.get_client()
-            version = client.get_version()
+            version = self._execute(client.get_version)
             api_ver = getattr(version, "api_version", "unknown")
             return True, f"Connected to Hindsight (API version: {api_ver})"
         except Exception as e:
@@ -99,7 +122,8 @@ class HindsightService:
         """
         try:
             client = self.get_client()
-            client.create_bank(
+            self._execute(
+                client.create_bank,
                 bank_id=self.bank_id,
                 name="DealMemory Org Bank",
                 mission="Persistent organizational memory for SaaS procurement negotiations, vendor tactics, and commercial intelligence.",
@@ -115,6 +139,7 @@ class HindsightService:
             if "already exists" in err_str or "409" in err_str or "conflict" in err_str:
                 return True, f"Memory bank '{self.bank_id}' is ready."
             return False, f"Error ensuring memory bank: {str(e)}"
+
 
     def retain_negotiation(
         self,
@@ -135,7 +160,8 @@ class HindsightService:
         
         try:
             start_time = time.time()
-            resp = client.retain(
+            resp = self._execute(
+                client.retain,
                 bank_id=self.bank_id,
                 content=content,
                 context=context,
@@ -177,7 +203,8 @@ class HindsightService:
         client = self.get_client()
         
         try:
-            response = client.recall(
+            response = self._execute(
+                client.recall,
                 bank_id=self.bank_id,
                 query=query,
                 budget=budget,
@@ -253,9 +280,9 @@ class HindsightService:
         """
         try:
             client = self.get_client()
-            version = client.get_version()
+            version = self._execute(client.get_version)
             # Try listing memories
-            memories = client.list_memories(bank_id=self.bank_id, limit=100)
+            memories = self._execute(client.list_memories, bank_id=self.bank_id, limit=100)
             items = getattr(memories, "items", []) or getattr(memories, "memories", []) or []
             
             return {
@@ -272,6 +299,7 @@ class HindsightService:
                 "error": str(e),
                 "status": "disconnected"
             }
+
 
 
 # Singleton service instance
